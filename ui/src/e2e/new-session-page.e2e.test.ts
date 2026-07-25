@@ -620,12 +620,11 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
     const gateway = await installMockGateway(page, {
       workspaceGit: true,
       models: [
-        { id: "gpt-5.5", name: "GPT 5.5", provider: "openai", reasoning: true },
+        { id: "gpt-5.5", name: "GPT 5.5", provider: "openai" },
         {
           id: "claude-sonnet-4-6",
           name: "Claude Sonnet 4.6",
           provider: "anthropic",
-          reasoning: true,
         },
       ],
       methodResponses: {
@@ -710,12 +709,11 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
     const context = await browser.newContext({ locale: "en-US", serviceWorkers: "block" });
     const page = await context.newPage();
     const models = [
-      { id: "gpt-5.5", name: "GPT 5.5", provider: "openai", reasoning: true },
+      { id: "gpt-5.5", name: "GPT 5.5", provider: "openai" },
       {
         id: "claude-sonnet-4-6",
         name: "Claude Sonnet 4.6",
         provider: "anthropic",
-        reasoning: true,
       },
     ];
     const branches = {
@@ -828,12 +826,11 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
     const gateway = await installMockGateway(page, {
       workspaceGit: true,
       models: [
-        { id: "gpt-5.5", name: "GPT 5.5", provider: "openai", reasoning: true },
+        { id: "gpt-5.5", name: "GPT 5.5", provider: "openai" },
         {
           id: "claude-sonnet-4-6",
           name: "Claude Sonnet 4.6",
           provider: "anthropic",
-          reasoning: true,
         },
       ],
       methodResponses: {
@@ -992,7 +989,8 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
         .toBe("openclaw");
 
       const pickedListRequests = (await gateway.getRequests("fs.listDir")).filter(
-        (request) => request.params?.path === PICKED,
+        (request) =>
+          request.params != null && "path" in request.params && request.params.path === PICKED,
       ).length;
       await navigateInApp(page, "chat");
       await page.waitForURL((url) => url.pathname.endsWith("/chat"));
@@ -1005,7 +1003,10 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
         .poll(
           async () =>
             (await gateway.getRequests("fs.listDir")).filter(
-              (request) => request.params?.path === PICKED,
+              (request) =>
+                request.params != null &&
+                "path" in request.params &&
+                request.params.path === PICKED,
             ).length,
         )
         .toBe(pickedListRequests);
