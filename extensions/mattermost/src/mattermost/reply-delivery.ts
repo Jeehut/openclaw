@@ -81,7 +81,7 @@ export function createMattermostReplyDeliveryBarrier(params: {
 }
 
 /**
- * Result of `deliverMattermostReplyPayload`. Callers in `monitor.ts` use this
+ * Result of `deliverMattermostReplyPayload`. Inbound delivery adapters use this
  * to distinguish a successful visible send from an intentionally suppressed
  * reasoning payload from a substantive payload that ended up sending nothing
  * (the silent-completion symptom in #80501).
