@@ -13,7 +13,7 @@ import type {
   CatalogSessionContinuedDetail,
   CatalogSessionKey,
 } from "../lib/sessions/catalog-key.ts";
-import { buildCatalogSessionKey, catalogSessionSearch } from "../lib/sessions/catalog-key.ts";
+import { buildCatalogSessionKey } from "../lib/sessions/catalog-key.ts";
 import {
   groupCatalogSessionsByPerson,
   groupCatalogSessionsByProject,
@@ -22,6 +22,7 @@ import {
 import { pathForSessionKey } from "../lib/sessions/index.ts";
 import type { NewSessionTarget } from "../pages/new-session/location.ts";
 import { shouldHandleNavigationClick } from "./app-sidebar-nav-menus.ts";
+import { catalogSessionNavigation } from "./app-sidebar-session-catalog-navigation.ts";
 import { icons } from "./icons.ts";
 import { renderSessionRowBadges } from "./session-row-badges.ts";
 
@@ -64,16 +65,6 @@ export type CatalogSessionMenuRequest = {
   canOpenTerminal: boolean;
   meta: string;
 };
-
-export function catalogSessionNavigation(
-  agentId: string,
-  key: CatalogSessionKey,
-  basePath = "",
-): { href: string; navigation: ApplicationNavigationOptions } {
-  const pathname = pathForSessionKey("chat", `agent:${agentId}:main`, basePath);
-  const search = catalogSessionSearch(key);
-  return { href: `${pathname}${search}`, navigation: { pathname, search } };
-}
 
 /** Stamps a freshly adopted session key onto its catalog row so the sidebar
     binds it before the next catalog poll confirms the adoption. */
