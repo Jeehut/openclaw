@@ -110,6 +110,7 @@ export function renderAppSidebarHomeRow(host: AppSidebarRenderHost) {
       href=${pathForSessionKey(
         "chat",
         mainKey,
+        agentId,
         host.basePath,
         mainRow ?? undefined,
         parseAgentSessionKey(mainKey)?.rest,

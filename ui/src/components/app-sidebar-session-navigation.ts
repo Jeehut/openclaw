@@ -285,6 +285,7 @@ export class AppSidebarSessionNavigationElement extends AppSidebarBase {
     const pathname = pathForSessionKey(
       "chat",
       sessionKey,
+      this.selectedAgentIdForSessions(),
       this.basePath,
       this.findSidebarSessionByKey(sessionKey),
       this.sessionMainKey(),
@@ -420,6 +421,7 @@ export class AppSidebarSessionNavigationElement extends AppSidebarBase {
     const pathname = pathForSessionKey(
       "chat",
       sessionKey,
+      this.selectedAgentIdForSessions(),
       this.basePath,
       this.findSidebarSessionByKey(sessionKey),
       this.sessionMainKey(),
@@ -532,6 +534,7 @@ export class AppSidebarSessionNavigationElement extends AppSidebarBase {
       pathname: pathForSessionKey(
         "chat",
         key,
+        agentId,
         this.basePath,
         this.findSidebarSessionByKey(key),
         this.sessionMainKey(),
