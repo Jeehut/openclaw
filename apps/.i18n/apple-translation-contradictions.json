@@ -2606,8 +2606,17 @@
       "locale": "es",
       "source": "Done",
       "translations": [
+        "Completado",
         "Hecho",
         "Listo"
+      ]
+    },
+    {
+      "locale": "fa",
+      "source": "Done",
+      "translations": [
+        "انجام شد",
+        "انجام‌شده"
       ]
     },
     {
@@ -2622,8 +2631,17 @@
       "locale": "it",
       "source": "Done",
       "translations": [
+        "Completato",
         "Fatto",
         "Fine"
+      ]
+    },
+    {
+      "locale": "nl",
+      "source": "Done",
+      "translations": [
+        "Gereed",
+        "Klaar"
       ]
     },
     {
@@ -2632,6 +2650,22 @@
       "translations": [
         "Klar",
         "Klart"
+      ]
+    },
+    {
+      "locale": "tr",
+      "source": "Done",
+      "translations": [
+        "Bitti",
+        "Tamamlandı"
+      ]
+    },
+    {
+      "locale": "zh-CN",
+      "source": "Done",
+      "translations": [
+        "完成",
+        "已完成"
       ]
     },
     {
@@ -2993,6 +3027,62 @@
       "translations": [
         "匯出對話紀錄",
         "匯出逐字稿"
+      ]
+    },
+    {
+      "locale": "ar",
+      "source": "Failed",
+      "translations": [
+        "فشل",
+        "فشلت"
+      ]
+    },
+    {
+      "locale": "es",
+      "source": "Failed",
+      "translations": [
+        "Con errores",
+        "Fallida"
+      ]
+    },
+    {
+      "locale": "ko",
+      "source": "Failed",
+      "translations": [
+        "실패",
+        "실패함"
+      ]
+    },
+    {
+      "locale": "pl",
+      "source": "Failed",
+      "translations": [
+        "Niepowodzenie",
+        "Nieudane"
+      ]
+    },
+    {
+      "locale": "ru",
+      "source": "Failed",
+      "translations": [
+        "Не выполнено",
+        "Ошибка"
+      ]
+    },
+    {
+      "locale": "uk",
+      "source": "Failed",
+      "translations": [
+        "Не виконано",
+        "Помилка"
+      ]
+    },
+    {
+      "locale": "zh-CN",
+      "source": "Failed",
+      "translations": [
+        "失败",
+        "已失败"
       ]
     },
     {
@@ -7048,6 +7138,46 @@
       ]
     },
     {
+      "locale": "fr",
+      "source": "Queued",
+      "translations": [
+        "En attente",
+        "En file d'attente"
+      ]
+    },
+    {
+      "locale": "id",
+      "source": "Queued",
+      "translations": [
+        "Dalam Antrean",
+        "Dalam antrean"
+      ]
+    },
+    {
+      "locale": "ja-JP",
+      "source": "Queued",
+      "translations": [
+        "キュー待ち",
+        "待機中"
+      ]
+    },
+    {
+      "locale": "sv",
+      "source": "Queued",
+      "translations": [
+        "I kö",
+        "Köad"
+      ]
+    },
+    {
+      "locale": "tr",
+      "source": "Queued",
+      "translations": [
+        "Sırada",
+        "Sıraya alındı"
+      ]
+    },
+    {
       "locale": "it",
       "source": "Ready",
       "translations": [
@@ -8060,6 +8190,14 @@
       ]
     },
     {
+      "locale": "de",
+      "source": "Running",
+      "translations": [
+        "Läuft",
+        "Wird ausgeführt"
+      ]
+    },
+    {
       "locale": "fr",
       "source": "Running",
       "translations": [
@@ -8100,6 +8238,7 @@
         "Uruchomiona",
         "Uruchomione",
         "Uruchomiono",
+        "Uruchomiony",
         "W toku"
       ]
     },
