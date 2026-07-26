@@ -1037,7 +1037,10 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
 
       const pickedListRequests = (await gateway.getRequests("fs.listDir")).filter(
         (request) =>
-          request.params != null && "path" in request.params && request.params.path === PICKED,
+          typeof request.params === "object" &&
+          request.params != null &&
+          "path" in request.params &&
+          request.params.path === PICKED,
       ).length;
       await navigateInApp(page, "chat");
       await page.waitForURL((url) => url.pathname.endsWith("/chat"));
@@ -1051,6 +1054,7 @@ describeControlUiE2e("Control UI new-session page mocked Gateway E2E", () => {
           async () =>
             (await gateway.getRequests("fs.listDir")).filter(
               (request) =>
+                typeof request.params === "object" &&
                 request.params != null &&
                 "path" in request.params &&
                 request.params.path === PICKED,
